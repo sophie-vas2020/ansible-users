@@ -11,7 +11,16 @@ users_default_shell: /bin/bash
 users_create_homedirs: true
 
 # Lists of users to create and delete
-users: []
+users:
+- username: vasiljevic
+    name: Sofija Vasiljevic
+    groups: ['swe']
+    uid: 1001
+    home: /local/home/vasiljevic
+    profile: |
+      alias ll='ls -lah'
+    ssh_key:
+      - ""
 users_deleted: []
 
 # List of groups to create
@@ -19,6 +28,8 @@ users_deleted: []
 #   groups_to_create:
 #     - name: developers
 #       gid: 10000
-groups_to_create: []
+groups_to_create:
+  - name: developers
+    gid: 10000
 
 authorized_keys_file: ".ssh/authorized_keys"
